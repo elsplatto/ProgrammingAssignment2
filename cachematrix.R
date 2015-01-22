@@ -1,6 +1,14 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
+##Acknowledgements & Disclosure
+#This code heavily replicates code I have seen while finding help for this assignment. Namely from
+#stackoverflow.com (http://stackoverflow.com/questions/23796316/returning-the-inverse-matrix-from-a-cached-object-in-r)
+#I have re-written it in my own hand but once learned something can not be unlearned and I am aware
+#my code moves into close plagerism territory. 
+
+#I would hope that my commenting shows that I understand the workings of the code intimately.
+
 ##=========makeCacheMatrix=================
 #The makeCacheMatrix function is a 'parent' function that contains a list of functions 
 #that do the grunt work 
@@ -63,13 +71,13 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
   
-  m<-x$getmatrix()
+  m <- x$getmatrix()
   if(!is.null(m)){
     #getting cached matrix
     return(m)
   }
-  matrix<-x$get()
-  m<-solve(matrix, ...)
+  matrix <- x$get()
+  m <- solve(matrix, ...)
   x$setmatrix(m)
   m
 }
